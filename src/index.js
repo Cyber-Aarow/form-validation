@@ -2,7 +2,7 @@ import './main.css';
 
 const countrySelect = document.querySelector('#country');
 const postalCodeField = document.querySelector('#postal_code');
-
+const form = document.querySelector('#form');
 
 function checkPostalCode(){
     const constraints = {
@@ -35,3 +35,9 @@ function checkPostalCode(){
 
 countrySelect.addEventListener('change', checkPostalCode);
 postalCodeField.addEventListener('input', checkPostalCode);
+form.addEventListener('submit', (e)=>{
+    if(!form.checkValidity()){
+        e.preventDefault();
+        form.reportValidity();
+    }
+});
