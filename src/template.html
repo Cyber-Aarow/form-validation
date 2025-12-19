@@ -6,27 +6,26 @@
     <title>Form Validation</title>
 </head>
 <body>
-    <form action="">
+    <form action="" novalidate>
         <legend>A Form</legend>
         <div class="form_input">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
+            <input type="email" id="email" name="email" required>
         </div>
         <div class="form_input">
             <label for="postal_code">Postal Code:</label>
-            <input type="text" id="postal_code" name="postal_code">
+            <input type="text" id="postal_code" name="postal_code" required>
             <select name="country" id="country">
                 <option value="" disabled selected hidden>Country</option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
+                <option value="ch">Switzerland</option>
+                <option value="us">United States</option>
             </select>
         </div>
         <div class="form_input">
             <label for="password">Password:</label>
-            <input type="text" id="password" name="password">
+            <input type="text" id="password" name="password" required>
             <label for="confirm_password">Confirm Password:</label>
-            <input type="text" id="confirm_password" name="confirm_password">
+            <input type="text" id="confirm_password" name="confirm_password" required>
         </div>
         <div id="submit_area">
             <button type="submit" id="submit">Submit</button>
