@@ -11,16 +11,16 @@
         <div class="form_input">
             <label for="email">Email:</label>
             <div class="error_holder">
-                <input type="email" id="email" name="email" required>
-                <span class="error" aria-live="polite"></span>
+                <input type="email" id="email" name="email" data-error="email_error" required>
+                <span class="error" aria-live="polite" id="email_error"></span>
             </div>
             
         </div>
         <div class="form_input">
             <label for="postal_code">Postal Code:</label>
             <div class="error_holder">
-                <input type="text" id="postal_code" name="postal_code" required>
-                <span class="error" aria-live="polite"></span>
+                <input type="text" id="postal_code" name="postal_code" data-error="poscode_error" required>
+                <span class="error" aria-live="polite" id="poscode_error"></span>
             </div>
             <select name="country" id="country">
                 <option value="" disabled selected hidden>Country</option>
@@ -30,14 +30,11 @@
         </div>
         <div class="form_input">
             <label for="password">Password:</label>
-            <div class="error_holder">
-                <input type="text" id="password" name="password" required>
-                <span class="error" aria-live="polite"></span>
-            </div>
+            <input type="text" id="password" name="password" required>
             <label for="confirm_password">Confirm Password:</label>
             <div class="error_holder">
-                <input type="text" id="confirm_password" name="confirm_password" required>
-                <span class="error" aria-live="polite"></span>
+                <input type="text" id="confirm_password" name="confirm_password" data-error="pw_error" required>
+                <span class="error" aria-live="polite" id="pw_error"></span>
             </div>
         </div>
         <div id="submit_area">
