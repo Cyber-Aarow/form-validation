@@ -37,7 +37,7 @@ input{
 }
 
 input:user-invalid{
-    border: red dashed;
+    border: #990000 dashed;
     background-color: pink;
 }
 
@@ -73,7 +73,8 @@ select{
 }
 
 .error{
-    width: 100%;
+    margin-left: 1.5%;
+    width: 97%;
     padding: 0;
 
     font-size: 80%;

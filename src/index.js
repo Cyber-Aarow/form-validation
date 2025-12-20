@@ -77,9 +77,9 @@ function validateField(input){
 
 
 
-email.addEventListener('input', (e) => validateField(e.target));
-postalCode.addEventListener('input', (e) => validateField(e.target));
-confirmPassword.addEventListener('input', (e) => validateField(e.target));
+email.addEventListener('blur', (e) => validateField(e.target));
+postalCode.addEventListener('blur', (e) => validateField(e.target));
+confirmPassword.addEventListener('blur', (e) => validateField(e.target));
 //Country affects postal_code validity
 countrySelect.addEventListener('change', () => validateField(postalCode));
 
