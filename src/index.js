@@ -40,16 +40,15 @@ function validatePostalCode(input){
 
     if(!constraints[country]){
         input.setCustomValidity("Please select a country.");
-        return;
-    }
-
-    const constraint = new RegExp(constraints[country][0], "");
-
-    if (constraint.test(input.value)){
-        input.setCustomValidity("");
     }
     else{
-        input.setCustomValidity(constraints[country][1]);
+        const constraint = new RegExp(constraints[country][0], "");
+        if (constraint.test(input.value)){
+            input.setCustomValidity("");
+        }
+        else{
+            input.setCustomValidity(constraints[country][1]);
+        }
     }
     showError(input, input.validationMessage);
 }
